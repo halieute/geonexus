@@ -1,4 +1,0 @@
- 
-# geonexus module
-
-::: geonexus.geonexus
