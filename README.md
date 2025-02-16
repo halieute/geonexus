@@ -10,7 +10,7 @@
 
 -   Free software: MIT License
 -   Documentation: https://halieute.github.io/geonexus
-    
+
 
 ## Features
 
