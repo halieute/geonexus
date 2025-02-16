@@ -13,4 +13,16 @@
 
 ## Features
 
--   TODO
+-   Create interactive maps
+-   Process geospatial data
+-   Geospatial visualization with vector and raster data
+-   Heatmap
+-   Split map
+-   Time slider for time series spatial data
+
+## Usage
+
+```python
+import geonexus
+import os
+```
