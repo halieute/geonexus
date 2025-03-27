@@ -1,6 +1,8 @@
 """Main module."""
+
 import os
 import ipyleaflet
+
 
 class Map(ipyleaflet.Map):
     def __init__(self, center=[20, 0], zoom=2, height="600px", **kwargs):
@@ -13,8 +15,8 @@ class Map(ipyleaflet.Map):
 
         Args:
             basemap (str, optional): Basemap name. Defaults to "OpenStreetMap".
-        """        
-        
+        """
+
         url = eval(f"ipyleaflet.basemaps.{basemap}").build_url()
         layer = ipyleaflet.TileLayer(url=url, name=basemap)
         self.add_layer(layer)
@@ -24,7 +26,7 @@ class Map(ipyleaflet.Map):
 
         Args:
             map_type (str, optional): Map type. Defaults to "ROADMAP".
-        """        
+        """
 
         map_types = {
             "ROADMAP": "m",
@@ -36,16 +38,11 @@ class Map(ipyleaflet.Map):
 
         url = (
             f"https://mt1.google.com/vt/lyrs={map_type.lower()}&x={{x}}&y={{y}}&z={{z}}"
-            )
+        )
         layer = ipyleaflet.TileLayer(url=url, name="Google Map")
         self.add(layer)
 
-
-    def add_geojson(
-            self, 
-            data, 
-            zoom_to_layer=True, 
-            hover_style=None, **kwargs):
+    def add_geojson(self, data, zoom_to_layer=True, hover_style=None, **kwargs):
         """
         Add a GeoJSON layer to the map.
 
@@ -59,6 +56,7 @@ class Map(ipyleaflet.Map):
             ValueError: If the data type is invalid.
         """
         import geopandas as gpd
+
         if hover_style is None:
             hover_style = {"color": "yellow", "fillOpacity": 0.2}
         if isinstance(data, str):
@@ -72,7 +70,6 @@ class Map(ipyleaflet.Map):
         if zoom_to_layer:
             bounds = gdf.total_bounds
             self.fit_bounds([[bounds[1], bounds[0]], [bounds[3], bounds[2]]])
-
 
     def add_shp(self, data, **kwargs):
         """
@@ -89,7 +86,6 @@ class Map(ipyleaflet.Map):
         geojson = gdf.__geo_interface__
         self.add_geojson(geojson, **kwargs)
 
-
     def add_gdf(self, gdf, **kwargs):
         """
         Add a GeoDataFrame to the map.
@@ -101,7 +97,6 @@ class Map(ipyleaflet.Map):
         gdf = gdf.to_crs(epsg=4326)
         geojson = gdf.__geo_interface__
         self.add_geojson(geojson, **kwargs)
-
 
     def add_vector(self, data, **kwargs):
         """
@@ -125,7 +120,7 @@ class Map(ipyleaflet.Map):
             self.add_geojson(data, **kwargs)
         else:
             raise ValueError("Invalid data type")
-        
+
     def add_layer_control(self):
         """
         Add a layer control widget to the map.
