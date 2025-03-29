@@ -81,7 +81,7 @@ nav:
     - Report Issues: https://github.com/halieute/geonexus/issues
     - Examples:
         - examples/intro.ipynb
-        - examples/folium.ipynb
+        - examples/foliumex.ipynb
         - examples/map.ipynb
     - API Reference:
           - geonexus module: geonexus.md
