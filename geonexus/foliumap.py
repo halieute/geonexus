@@ -3,6 +3,7 @@
 import folium
 import folium.plugins
 
+
 class Map(folium.Map):
     def __init__(self, center=(0, 0), zoom=2, **kwargs):
         """
@@ -95,12 +96,13 @@ class Map(folium.Map):
         """
         folium.LayerControl().add_to(self)
 
-
-    def add_split_map(self, right='openstreetmap', left='cartodbpositron', **kwargs):
+    def add_split_map(self, right="openstreetmap", left="cartodbpositron", **kwargs):
         layer_right = folium.TileLayer(right, **kwargs)
         layer_left = folium.TileLayer(left, **kwargs)
 
-        sbs = folium.plugins.SideBySideLayers(layer_left=layer_left, layer_right=layer_right)
+        sbs = folium.plugins.SideBySideLayers(
+            layer_left=layer_left, layer_right=layer_right
+        )
 
         layer_left.add_to(self)
         layer_right.add_to(self)
