@@ -1,0 +1,4 @@
+
+# foliumap module
+
+::: geonexus.foliumap
