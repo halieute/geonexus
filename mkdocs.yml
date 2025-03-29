@@ -82,6 +82,8 @@ nav:
     - Examples:
         - examples/intro.ipynb
         - examples/map.ipynb
+        - examples/foliumap.ipynb
     - API Reference:
           - geonexus module: geonexus.md
           - common module: common.md
+          - foliumap module: foliumap.md
