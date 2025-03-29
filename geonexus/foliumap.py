@@ -1,6 +1,7 @@
 """This module provides a custom Map class that extends folium.Map."""
 
 import folium
+import folium.plugins
 
 
 class Map(folium.Map):
@@ -94,3 +95,15 @@ class Map(folium.Map):
         The layer control allows users to toggle the visibility of layers.
         """
         folium.LayerControl().add_to(self)
+
+    def add_split_map(self, right="openstreetmap", left="cartodbpositron", **kwargs):
+        layer_right = folium.TileLayer(right, **kwargs)
+        layer_left = folium.TileLayer(left, **kwargs)
+
+        sbs = folium.plugins.SideBySideLayers(
+            layer_left=layer_left, layer_right=layer_right
+        )
+
+        layer_left.add_to(self)
+        layer_right.add_to(self)
+        sbs.add_to(self)
