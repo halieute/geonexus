@@ -2,6 +2,7 @@
 
 import folium
 import folium.plugins
+import os
 
 
 class Map(folium.Map):
@@ -96,9 +97,35 @@ class Map(folium.Map):
         """
         folium.LayerControl().add_to(self)
 
-    def add_split_map(self, right="openstreetmap", left="cartodbpositron", **kwargs):
-        layer_right = folium.TileLayer(right, **kwargs)
-        layer_left = folium.TileLayer(left, **kwargs)
+    # def add_split_map(self, right="openstreetmap", left="cartodbpositron", **kwargs):
+    #     layer_right = folium.TileLayer(right, **kwargs)
+    #     layer_left = folium.TileLayer(left, **kwargs)
+
+    #     sbs = folium.plugins.SideBySideLayers(
+    #         layer_left=layer_left, layer_right=layer_right
+    #     )
+
+    #     layer_left.add_to(self)
+    #     layer_right.add_to(self)
+    #     sbs.add_to(self)
+
+    def add_split_map(self, left="openstreetmap", right="cartodbpositron", **kwargs):
+        """Adds a split map to the map.
+
+        Args:
+            left (str, optional): The tile layer for the left side of the split map. Defaults to "openstreetmap".
+            right (str, optional): The tile layer for the right side of the split map. Defaults to "cartodbpositron".
+        """
+        from localtileserver import get_folium_tile_layer
+
+        if left.startswith("http") or os.path.exists(left):
+            layer_left = get_folium_tile_layer(left, **kwargs)
+        else:
+            layer_left = folium.TileLayer(left, overlay=True, **kwargs)
+        if right.startswith("http") or os.path.exists(right):
+            layer_right = get_folium_tile_layer(right, **kwargs)
+        else:
+            layer_right = folium.TileLayer(right, overlay=True, **kwargs)
 
         sbs = folium.plugins.SideBySideLayers(
             layer_left=layer_left, layer_right=layer_right
