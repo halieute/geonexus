@@ -1,6 +1,5 @@
 """Main module."""
 
-import os
 import ipyleaflet
 
 
@@ -129,3 +128,47 @@ class Map(ipyleaflet.Map):
         """
         control = ipyleaflet.LayersControl(position="topright")
         self.add_control(control)
+
+    # def add_raster(self, filepath, **kwargs):
+
+    #     from localtileserver import TileClient, get_leaflet_tile_layer
+    #     from ipyleaflet import Map
+
+    #     client = TileClient(filepath)
+    #     tile_layer = get_leaflet_tile_layer(client, **kwargs)
+
+    #     self.add(tile_layer)
+    #     self.center = client.center()
+    #     self.zoom = client.default_zoom
+
+    def add_raster(self, raster_source, name=None, **kwargs):
+        """
+        Adds a raster tile layer to the map from a file path or URL.
+
+        Args:
+            raster_source (str): File path or URL to the raster.
+            name (str, optional): Optional name for the raster layer.
+            **kwargs: Additional arguments passed to the tile layer.
+        """
+        from localtileserver import TileClient, get_leaflet_tile_layer
+        import os
+
+        # Check if it's a URL or a file path
+        if raster_source.startswith("http") or os.path.exists(raster_source):
+            client = TileClient(raster_source)
+            layer = get_leaflet_tile_layer(client, **kwargs)
+        else:
+            raise ValueError("Invalid raster source. Provide a valid URL or file path.")
+
+        # Optionally name the layer
+        if name:
+            layer.name = name
+
+        # Add to map
+        self.add(layer)
+
+        # Center the map once on the first layer
+        if not getattr(self, "_has_centered", False):
+            self.center = client.center()
+            self.zoom = client.default_zoom
+            self._has_centered = True

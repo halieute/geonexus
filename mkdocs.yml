@@ -83,6 +83,8 @@ nav:
         - examples/intro.ipynb
         - examples/foliumex.ipynb
         - examples/map.ipynb
+        - examples/raster.ipynb
+        - examples/split_map.ipynb
     - API Reference:
           - geonexus module: geonexus.md
           - common module: common.md
