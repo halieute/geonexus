@@ -129,12 +129,11 @@ class Map(ipyleaflet.Map):
         control = ipyleaflet.LayersControl(position="topright")
         self.add_control(control)
 
-
     # def add_raster(self, filepath, **kwargs):
 
     #     from localtileserver import TileClient, get_leaflet_tile_layer
     #     from ipyleaflet import Map
-      
+
     #     client = TileClient(filepath)
     #     tile_layer = get_leaflet_tile_layer(client, **kwargs)
 
