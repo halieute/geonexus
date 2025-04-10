@@ -1181,9 +1181,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><a href="https://demo.leafmap.org/lab/index.html?path=notebooks/49_split_control.ipynb"><img alt="image" src="https://jupyterlite.rtfd.io/en/latest/_static/badge.svg"/></a>
-<a href="https://colab.research.google.com/github/opengeos/leafmap/blob/master/docs/notebooks/49_split_control.ipynb"><img alt="image" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>
-<a href="https://mybinder.org/v2/gh/opengeos/leafmap/HEAD"><img alt="image" src="https://mybinder.org/badge_logo.svg"/></a></p>
+<p><a href="https://colab.research.google.com/github/halieute/geonexus/blob/main/docs/examples/split_map.ipynb"><img alt="image" src="https://colab.research.google.com/assets/colab-badge.svg"/></a></p>
 <p><strong>Creating a split-panel map</strong></p>
 <p>This notebook demonstrates how to add a split-panel map with leafmap anf folium. It also supports streamlit. Note that the ipyleaflet SplitControl does not support streamlit.</p>
 <p>Uncomment the following line to install <a href="https://halieute.github.io/geonexus">geonexus</a> if needed.</p>
@@ -1322,7 +1320,7 @@ m</div>
             &lt;meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
             &lt;style&gt;
-                #map_38240aa74608f3f5c3d2611775c7c157 {
+                #map_dba5aec7155a50bdd7c654df5ff1d296 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1337,14 +1335,14 @@ m</div>
 &lt;body&gt;
     
     
-            &lt;div class="folium-map" id="map_38240aa74608f3f5c3d2611775c7c157" &gt;&lt;/div&gt;
+            &lt;div class="folium-map" id="map_dba5aec7155a50bdd7c654df5ff1d296" &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_38240aa74608f3f5c3d2611775c7c157 = L.map(
-                "map_38240aa74608f3f5c3d2611775c7c157",
+            var map_dba5aec7155a50bdd7c654df5ff1d296 = L.map(
+                "map_dba5aec7155a50bdd7c654df5ff1d296",
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1361,7 +1359,7 @@ m</div>
 
         
     
-            var tile_layer_e73a29355cc538910775207dcf378835 = L.tileLayer(
+            var tile_layer_821f1260a4f42d7f8de74dc1110fa0e6 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1378,10 +1376,10 @@ m</div>
             );
         
     
-            tile_layer_e73a29355cc538910775207dcf378835.addTo(map_38240aa74608f3f5c3d2611775c7c157);
+            tile_layer_821f1260a4f42d7f8de74dc1110fa0e6.addTo(map_dba5aec7155a50bdd7c654df5ff1d296);
         
     
-            var tile_layer_8f48ce068821d24169cb629cc266eeba = L.tileLayer(
+            var tile_layer_ea379943428d8ad76d4390690b4a1c07 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1398,10 +1396,10 @@ m</div>
             );
         
     
-            tile_layer_8f48ce068821d24169cb629cc266eeba.addTo(map_38240aa74608f3f5c3d2611775c7c157);
+            tile_layer_ea379943428d8ad76d4390690b4a1c07.addTo(map_dba5aec7155a50bdd7c654df5ff1d296);
         
     
-            var tile_layer_c0fb85f5fa937a58af90efb83922a257 = L.tileLayer(
+            var tile_layer_e511beea1b9c053de8b36f7a7435b750 = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {
   "minZoom": 0,
@@ -1418,32 +1416,32 @@ m</div>
             );
         
     
-            tile_layer_c0fb85f5fa937a58af90efb83922a257.addTo(map_38240aa74608f3f5c3d2611775c7c157);
+            tile_layer_e511beea1b9c053de8b36f7a7435b750.addTo(map_dba5aec7155a50bdd7c654df5ff1d296);
         
     
-            var side_by_side_layers_20d7e515e0f9b4cd0c42a8b4e43fcb3f = L.control.sideBySide(
-                tile_layer_8f48ce068821d24169cb629cc266eeba, tile_layer_c0fb85f5fa937a58af90efb83922a257
-            ).addTo(map_38240aa74608f3f5c3d2611775c7c157);
+            var side_by_side_layers_3994d5a933970b5ace20f3e69ff5b35d = L.control.sideBySide(
+                tile_layer_ea379943428d8ad76d4390690b4a1c07, tile_layer_e511beea1b9c053de8b36f7a7435b750
+            ).addTo(map_dba5aec7155a50bdd7c654df5ff1d296);
         
     
-            var layer_control_1fa5e01fcc0ebd92dc60dbe8a1b670b6_layers = {
+            var layer_control_1e8921e277a52a1dba4841c9efc516ea_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_e73a29355cc538910775207dcf378835,
+                    "openstreetmap" : tile_layer_821f1260a4f42d7f8de74dc1110fa0e6,
                 },
                 overlays :  {
-                    "openstreetmap" : tile_layer_8f48ce068821d24169cb629cc266eeba,
-                    "esriworldimagery" : tile_layer_c0fb85f5fa937a58af90efb83922a257,
+                    "openstreetmap" : tile_layer_ea379943428d8ad76d4390690b4a1c07,
+                    "esriworldimagery" : tile_layer_e511beea1b9c053de8b36f7a7435b750,
                 },
             };
-            let layer_control_1fa5e01fcc0ebd92dc60dbe8a1b670b6 = L.control.layers(
-                layer_control_1fa5e01fcc0ebd92dc60dbe8a1b670b6_layers.base_layers,
-                layer_control_1fa5e01fcc0ebd92dc60dbe8a1b670b6_layers.overlays,
+            let layer_control_1e8921e277a52a1dba4841c9efc516ea = L.control.layers(
+                layer_control_1e8921e277a52a1dba4841c9efc516ea_layers.base_layers,
+                layer_control_1e8921e277a52a1dba4841c9efc516ea_layers.overlays,
                 {
   "position": "topright",
   "collapsed": true,
   "autoZIndex": true,
 }
-            ).addTo(map_38240aa74608f3f5c3d2611775c7c157);
+            ).addTo(map_dba5aec7155a50bdd7c654df5ff1d296);
 
         
 &lt;/script&gt;
@@ -1532,7 +1530,7 @@ m</div>
             &lt;meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /&gt;
             &lt;style&gt;
-                #map_552155106c365eb86ecdfc706894b388 {
+                #map_3311f970c87db00690f56cb25054936c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1547,14 +1545,14 @@ m</div>
 &lt;body&gt;
     
     
-            &lt;div class="folium-map" id="map_552155106c365eb86ecdfc706894b388" &gt;&lt;/div&gt;
+            &lt;div class="folium-map" id="map_3311f970c87db00690f56cb25054936c" &gt;&lt;/div&gt;
         
 &lt;/body&gt;
 &lt;script&gt;
     
     
-            var map_552155106c365eb86ecdfc706894b388 = L.map(
-                "map_552155106c365eb86ecdfc706894b388",
+            var map_3311f970c87db00690f56cb25054936c = L.map(
+                "map_3311f970c87db00690f56cb25054936c",
                 {
                     center: [32.7748, 22.6282],
                     crs: L.CRS.EPSG3857,
@@ -1571,7 +1569,7 @@ m</div>
 
         
     
-            var tile_layer_6bdf8769afa03ca3a59b22f0a5059620 = L.tileLayer(
+            var tile_layer_7e3585b6a6aaa6df67d7ed1cb49a9d03 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -1588,11 +1586,11 @@ m</div>
             );
         
     
-            tile_layer_6bdf8769afa03ca3a59b22f0a5059620.addTo(map_552155106c365eb86ecdfc706894b388);
+            tile_layer_7e3585b6a6aaa6df67d7ed1cb49a9d03.addTo(map_3311f970c87db00690f56cb25054936c);
         
     
-            var tile_layer_8a9de91ab5ba7c0ba9d7eb484f2e4122 = L.tileLayer(
-                "http://127.0.0.1:35671/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-07-01.tif%26use_head%3Dno%26list_dir%3Dno",
+            var tile_layer_3880241d3a13a4ac51db62a3e396d2c0 = L.tileLayer(
+                "http://127.0.0.1:41079/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-07-01.tif%26use_head%3Dno%26list_dir%3Dno",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -1609,11 +1607,11 @@ m</div>
             );
         
     
-            tile_layer_8a9de91ab5ba7c0ba9d7eb484f2e4122.addTo(map_552155106c365eb86ecdfc706894b388);
+            tile_layer_3880241d3a13a4ac51db62a3e396d2c0.addTo(map_3311f970c87db00690f56cb25054936c);
         
     
-            var tile_layer_b81ce965ad592da72685ac11df0e0c42 = L.tileLayer(
-                "http://127.0.0.1:35671/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-09-13.tif%26use_head%3Dno%26list_dir%3Dno",
+            var tile_layer_8d3f4c3898fa77834cca263b18b46895 = L.tileLayer(
+                "http://127.0.0.1:41079/api/tiles/{z}/{x}/{y}.png?\u0026filename=%2Fvsicurl%3Furl%3Dhttps%253A%252F%252Fgithub.com%252Fopengeos%252Fdata%252Freleases%252Fdownload%252Fraster%252FLibya-2023-09-13.tif%26use_head%3Dno%26list_dir%3Dno",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -1630,12 +1628,12 @@ m</div>
             );
         
     
-            tile_layer_b81ce965ad592da72685ac11df0e0c42.addTo(map_552155106c365eb86ecdfc706894b388);
+            tile_layer_8d3f4c3898fa77834cca263b18b46895.addTo(map_3311f970c87db00690f56cb25054936c);
         
     
-            var side_by_side_layers_d4245ebb494a057556ce23beb5b5e93d = L.control.sideBySide(
-                tile_layer_8a9de91ab5ba7c0ba9d7eb484f2e4122, tile_layer_b81ce965ad592da72685ac11df0e0c42
-            ).addTo(map_552155106c365eb86ecdfc706894b388);
+            var side_by_side_layers_2a7cfd18850a0666e12c3e5e809cd930 = L.control.sideBySide(
+                tile_layer_3880241d3a13a4ac51db62a3e396d2c0, tile_layer_8d3f4c3898fa77834cca263b18b46895
+            ).addTo(map_3311f970c87db00690f56cb25054936c);
         
 &lt;/script&gt;
 &lt;/html&gt;' style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" webkitallowfullscreen=""></iframe></div></div>
@@ -1674,7 +1672,7 @@ m</div>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 10, 2025 08:19:19"><span class="timeago" datetime="2025-04-10T08:19:19+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 10, 2025 08:19:19">2025-04-10</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="April 10, 2025 09:30:16"><span class="timeago" datetime="2025-04-10T09:30:16+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="April 10, 2025 09:30:16">2025-04-10</span>
   </span>
 
     
