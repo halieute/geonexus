@@ -701,6 +701,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_basemap_gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_basemap_gui()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#geonexus.geonexus.Map.add_gdf" class="md-nav__link">
     <span class="md-ellipsis">
       add_gdf()
@@ -728,18 +737,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geonexus.geonexus.Map.add_layer_control" class="md-nav__link">
+  <a href="#geonexus.geonexus.Map.add_image" class="md-nav__link">
     <span class="md-ellipsis">
-      add_layer_control()
+      add_image()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#geonexus.geonexus.Map.add_raster" class="md-nav__link">
+  <a href="#geonexus.geonexus.Map.add_layer_control" class="md-nav__link">
     <span class="md-ellipsis">
-      add_raster()
+      add_layer_control()
     </span>
   </a>
   
@@ -758,6 +767,33 @@
   <a href="#geonexus.geonexus.Map.add_vector" class="md-nav__link">
     <span class="md-ellipsis">
       add_vector()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_video()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_widget()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_wms_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_wms_layer()
     </span>
   </a>
   
@@ -885,6 +921,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_basemap_gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_basemap_gui()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#geonexus.geonexus.Map.add_gdf" class="md-nav__link">
     <span class="md-ellipsis">
       add_gdf()
@@ -912,18 +957,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#geonexus.geonexus.Map.add_layer_control" class="md-nav__link">
+  <a href="#geonexus.geonexus.Map.add_image" class="md-nav__link">
     <span class="md-ellipsis">
-      add_layer_control()
+      add_image()
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#geonexus.geonexus.Map.add_raster" class="md-nav__link">
+  <a href="#geonexus.geonexus.Map.add_layer_control" class="md-nav__link">
     <span class="md-ellipsis">
-      add_raster()
+      add_layer_control()
     </span>
   </a>
   
@@ -942,6 +987,33 @@
   <a href="#geonexus.geonexus.Map.add_vector" class="md-nav__link">
     <span class="md-ellipsis">
       add_vector()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_video" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_video()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_widget()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geonexus.geonexus.Map.add_wms_layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_wms_layer()
     </span>
   </a>
   
@@ -1014,28 +1086,114 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Map</span><span class="p">(</span><span class="n">ipyleaflet</span><span class="o">.</span><span class="n">Map</span><span class="p">):</span>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;600px&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="n">center</span><span class="p">,</span> <span class="n">zoom</span><span class="o">=</span><span class="n">zoom</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">scroll_wheel_zoom</span> <span class="o">=</span> <span class="kc">True</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a basemap to the map.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add basemap to the map.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            basemap (str, optional): Basemap name. Defaults to &quot;OpenStreetMap&quot;.</span>
+<span class="sd">            basemap (str, optional): Basemap name. Defaults to &quot;OpenTopoMap&quot;.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="n">url</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ipyleaflet.basemaps.</span><span class="si">{</span><span class="n">basemap</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
         <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">basemap</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_basemap_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a graphical user interface (GUI) for selecting basemaps.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            options (list, optional): A list of basemap options to display in the dropdown.</span>
+<span class="sd">                Defaults to [&quot;OpenStreetMap.Mapnik&quot;, &quot;OpenTopoMap&quot;, &quot;Esri.WorldImagery&quot;, &quot;CartoDB.Positron&quot;].</span>
+<span class="sd">            position (str, optional): The position of the GUI on the map. Defaults to the topright.</span>
+
+<span class="sd">            Behavior:</span>
+<span class="sd">            - A toggle button is used to show or hide the dropdown and close menu.</span>
+<span class="sd">            - The dropdown allows users to select the basemap from the provided options.</span>
+<span class="sd">            - The close button removes the widget from the map</span>
+
+<span class="sd">            Event handlers:</span>
+<span class="sd">            - `on_toggle_change`: Toggles the visibility of the dropdown and close button.</span>
+<span class="sd">            - `on_button_click`: Closes and removes the widget when the close button is clicked.</span>
+<span class="sd">            - `on_dropdown_change`: Updates the map&#39;s basemap when a new option is selected.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">options</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Stamen Terrain&quot;</span><span class="p">,</span>
+            <span class="p">]</span>
+
+        <span class="n">toggle</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+            <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;</span>
+            <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Click me&quot;</span><span class="p">,</span>
+            <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">toggle</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+        <span class="n">dropdown</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+            <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+            <span class="n">value</span><span class="o">=</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basemap:&quot;</span><span class="p">,</span>
+            <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">},</span>
+        <span class="p">)</span>
+        <span class="n">dropdown</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;250px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+        <span class="n">button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+            <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">button</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+        <span class="n">hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">toggle</span><span class="p">,</span> <span class="n">dropdown</span><span class="p">,</span> <span class="n">button</span><span class="p">])</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">on_toggle_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+                <span class="n">hbox</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toggle</span><span class="p">,</span> <span class="n">dropdown</span><span class="p">,</span> <span class="n">button</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">hbox</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toggle</span><span class="p">]</span>
+
+        <span class="n">toggle</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_toggle_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">on_button_click</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+            <span class="n">hbox</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">toggle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">dropdown</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+            <span class="n">button</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+        <span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_click</span><span class="p">)</span>
+
+        <span class="k">def</span><span class="w"> </span><span class="nf">on_dropdown_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">])</span>
+
+        <span class="n">dropdown</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_dropdown_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+        <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">hbox</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a widget to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            widget (ipywidgets.Widget): The widget to add.</span>
+<span class="sd">            position (str, optional): The position of the widget. Defaults to &quot;topright&quot;.</span>
+<span class="sd">            **kwargs: Additional keyword arguments for the ipyleaflet.WidgetControl layer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_google_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_type</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a Google Map to the map.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Add Google Map to the map.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            map_type (str, optional): Map type. Defaults to &quot;ROADMAP&quot;.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-
         <span class="n">map_types</span> <span class="o">=</span> <span class="p">{</span>
             <span class="s2">&quot;ROADMAP&quot;</span><span class="p">:</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span>
             <span class="s2">&quot;SATELLITE&quot;</span><span class="p">:</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span>
@@ -1050,14 +1208,19 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Google Map&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hover_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a GeoJSON layer to the map.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">data</span><span class="p">,</span>
+        <span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">hover_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a GeoJSON layer to the map.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            data (str or dict): The GeoJSON data. Can be a file path (str) or a dictionary.</span>
 <span class="sd">            zoom_to_layer (bool, optional): Whether to zoom to the layer&#39;s bounds. Defaults to True.</span>
-<span class="sd">            hover_style (dict, optional): Style applied when hovering over the layer. Defaults to {&quot;color&quot;: &quot;yellow&quot;, &quot;fillOpacity&quot;: 0.2}.</span>
+<span class="sd">            hover_style (dict, optional): Style to apply when hovering over features. Defaults to {&quot;color&quot;: &quot;yellow&quot;, &quot;fillOpacity&quot;: 0.2}.</span>
 <span class="sd">            **kwargs: Additional keyword arguments for the ipyleaflet.GeoJSON layer.</span>
 
 <span class="sd">        Raises:</span>
@@ -1067,6 +1230,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
         <span class="k">if</span> <span class="n">hover_style</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">hover_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;fillOpacity&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">}</span>
+
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
             <span class="n">geojson</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">__geo_interface__</span>
@@ -1080,8 +1244,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="bp">self</span><span class="o">.</span><span class="n">fit_bounds</span><span class="p">([[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">0</span><span class="p">]],</span> <span class="p">[</span><span class="n">bounds</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">bounds</span><span class="p">[</span><span class="mi">2</span><span class="p">]]])</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_shp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a shapefile to the map.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a shapefile to the map.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            data (str): The file path to the shapefile.</span>
@@ -1095,8 +1258,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">geojson</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_gdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a GeoDataFrame to the map.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a GeoDataFrame to the map.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            gdf (geopandas.GeoDataFrame): The GeoDataFrame to add.</span>
@@ -1107,12 +1269,11 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">geojson</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add vector data to the map.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds vector data to the map.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            data (str, geopandas.GeoDataFrame, or dict): The vector data. Can be a file path (str), a GeoDataFrame, or a GeoJSON dictionary.</span>
-<span class="sd">            **kwargs: Additional keyword arguments for the layer.</span>
+<span class="sd">            data (str, geopandas.GeoDataFrame, or dict): The vector data. Can be a file path, GeoDataFrame, or GeoJSON dictionary.</span>
+<span class="sd">            **kwargs: Additional keyword arguments for the GeoJSON layer.</span>
 
 <span class="sd">        Raises:</span>
 <span class="sd">            ValueError: If the data type is invalid.</span>
@@ -1121,7 +1282,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
         <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
             <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_shp</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_gdf</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_gdf</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
@@ -1130,57 +1291,63 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid data type&quot;</span><span class="p">)</span>
 
     <span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Add a layer control widget to the map.</span>
-
-<span class="sd">        The layer control allows users to toggle the visibility of layers.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a layer control widget to the map.&quot;&quot;&quot;</span>
         <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 
-    <span class="c1"># def add_raster(self, filepath, **kwargs):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filepath</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
 
-    <span class="c1">#     from localtileserver import TileClient, get_leaflet_tile_layer</span>
-    <span class="c1">#     from ipyleaflet import Map</span>
+        <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
 
-    <span class="c1">#     client = TileClient(filepath)</span>
-    <span class="c1">#     tile_layer = get_leaflet_tile_layer(client, **kwargs)</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="n">TileClient</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
+        <span class="n">tile_layer</span> <span class="o">=</span> <span class="n">get_leaflet_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-    <span class="c1">#     self.add(tile_layer)</span>
-    <span class="c1">#     self.center = client.center()</span>
-    <span class="c1">#     self.zoom = client.default_zoom</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tile_layer</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raster_source</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Adds a raster tile layer to the map from a file path or URL.</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds an image to the map.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            raster_source (str): File path or URL to the raster.</span>
-<span class="sd">            name (str, optional): Optional name for the raster layer.</span>
-<span class="sd">            **kwargs: Additional arguments passed to the tile layer.</span>
+<span class="sd">            image (str): The file path to the image.</span>
+<span class="sd">            bounds (list, optional): The bounds for the image. Defaults to None.</span>
+<span class="sd">            **kwargs: Additional keyword arguments for the ipyleaflet.ImageOverlay layer.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
-        <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-        <span class="c1"># Check if it&#39;s a URL or a file path</span>
-        <span class="k">if</span> <span class="n">raster_source</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">raster_source</span><span class="p">):</span>
-            <span class="n">client</span> <span class="o">=</span> <span class="n">TileClient</span><span class="p">(</span><span class="n">raster_source</span><span class="p">)</span>
-            <span class="n">layer</span> <span class="o">=</span> <span class="n">get_leaflet_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid raster source. Provide a valid URL or file path.&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span><span class="p">]]</span>
+        <span class="n">overlay</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ImageOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
 
-        <span class="c1"># Optionally name the layer</span>
-        <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-            <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a video to the map.</span>
 
-        <span class="c1"># Add to map</span>
+<span class="sd">        Args:</span>
+<span class="sd">            video (str): The file path to the video.</span>
+<span class="sd">            bounds (list, optional): The bounds for the video. Defaults to None.</span>
+<span class="sd">            **kwargs: Additional keyword arguments for the ipyleaflet.VideoOverlay layer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span><span class="p">]]</span>
+        <span class="n">overlay</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">VideoOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">video</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_wms_layer</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;image/png&quot;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Adds a WMS layer to the map.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            url (str): The WMS service URL.</span>
+<span class="sd">            layers (str): The layers to display.</span>
+<span class="sd">            **kwargs: Additional keyword arguments for the ipyleaflet.WMSLayer layer.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WMSLayer</span><span class="p">(</span>
+            <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="o">=</span><span class="n">layers</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="n">transparent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
-
-        <span class="c1"># Center the map once on the first layer</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_has_centered&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">_has_centered</span> <span class="o">=</span> <span class="kc">True</span>
 </code></pre></div>
         </details>
 
@@ -1202,14 +1369,14 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 <h3 id="geonexus.geonexus.Map.add_basemap" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s1">&#39;OpenStreetMap&#39;</span><span class="p">)</span></code>
+<code class="highlight language-python"><span class="n">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s1">&#39;OpenTopoMap&#39;</span><span class="p">)</span></code>
 
 
 <a href="#geonexus.geonexus.Map.add_basemap" class="headerlink" title="Permanent link">&para;</a></h3>
 
     <div class="doc doc-contents ">
 
-      <p>Add a basemap to the map.</p>
+      <p>Add basemap to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1225,23 +1392,177 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
       <tr>
         <td><code>basemap</code></td>
         <td><code>str</code></td>
-        <td><p>Basemap name. Defaults to "OpenStreetMap".</p></td>
-        <td><code>&#39;OpenStreetMap&#39;</code></td>
+        <td><p>Basemap name. Defaults to "OpenTopoMap".</p></td>
+        <td><code>&#39;OpenTopoMap&#39;</code></td>
       </tr>
   </tbody>
 </table>
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a basemap to the map.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_basemap</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">basemap</span><span class="o">=</span><span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add basemap to the map.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        basemap (str, optional): Basemap name. Defaults to &quot;OpenStreetMap&quot;.</span>
+<span class="sd">        basemap (str, optional): Basemap name. Defaults to &quot;OpenTopoMap&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="n">url</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ipyleaflet.basemaps.</span><span class="si">{</span><span class="n">basemap</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">build_url</span><span class="p">()</span>
     <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">TileLayer</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="n">basemap</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geonexus.geonexus.Map.add_basemap_gui" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_basemap_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">)</span></code>
+
+
+<a href="#geonexus.geonexus.Map.add_basemap_gui" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a graphical user interface (GUI) for selecting basemaps.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>options</code></td>
+        <td><code>list</code></td>
+        <td><p>A list of basemap options to display in the dropdown.
+Defaults to ["OpenStreetMap.Mapnik", "OpenTopoMap", "Esri.WorldImagery", "CartoDB.Positron"].</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the GUI on the map. Defaults to the topright.</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>Behavior</code></td>
+        <td></td>
+        <td></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>Event</code></td>
+        <td><code>handlers</code></td>
+        <td></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>-</code></td>
+        <td><code>`on_toggle_change`</code></td>
+        <td><p>Toggles the visibility of the dropdown and close button.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>-</code></td>
+        <td><code>`on_button_click`</code></td>
+        <td><p>Closes and removes the widget when the close button is clicked.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>-</code></td>
+        <td><code>`on_dropdown_change`</code></td>
+        <td><p>Updates the map's basemap when a new option is selected.</p></td>
+        <td><em>required</em></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_basemap_gui</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a graphical user interface (GUI) for selecting basemaps.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        options (list, optional): A list of basemap options to display in the dropdown.</span>
+<span class="sd">            Defaults to [&quot;OpenStreetMap.Mapnik&quot;, &quot;OpenTopoMap&quot;, &quot;Esri.WorldImagery&quot;, &quot;CartoDB.Positron&quot;].</span>
+<span class="sd">        position (str, optional): The position of the GUI on the map. Defaults to the topright.</span>
+
+<span class="sd">        Behavior:</span>
+<span class="sd">        - A toggle button is used to show or hide the dropdown and close menu.</span>
+<span class="sd">        - The dropdown allows users to select the basemap from the provided options.</span>
+<span class="sd">        - The close button removes the widget from the map</span>
+
+<span class="sd">        Event handlers:</span>
+<span class="sd">        - `on_toggle_change`: Toggles the visibility of the dropdown and close button.</span>
+<span class="sd">        - `on_button_click`: Closes and removes the widget when the close button is clicked.</span>
+<span class="sd">        - `on_dropdown_change`: Updates the map&#39;s basemap when a new option is selected.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">options</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">options</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;OpenStreetMap&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;OpenTopoMap&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Stamen Terrain&quot;</span><span class="p">,</span>
+        <span class="p">]</span>
+
+    <span class="n">toggle</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">ToggleButton</span><span class="p">(</span>
+        <span class="n">value</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">button_style</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1"># &#39;success&#39;, &#39;info&#39;, &#39;warning&#39;, &#39;danger&#39; or &#39;&#39;</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="s2">&quot;Click me&quot;</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;map&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">toggle</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+    <span class="n">dropdown</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Dropdown</span><span class="p">(</span>
+        <span class="n">options</span><span class="o">=</span><span class="n">options</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">options</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Basemap:&quot;</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;description_width&quot;</span><span class="p">:</span> <span class="s2">&quot;initial&quot;</span><span class="p">},</span>
+    <span class="p">)</span>
+    <span class="n">dropdown</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;250px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+    <span class="n">button</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span>
+        <span class="n">icon</span><span class="o">=</span><span class="s2">&quot;times&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;38px&quot;</span><span class="p">)</span>
+
+    <span class="n">hbox</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">HBox</span><span class="p">([</span><span class="n">toggle</span><span class="p">,</span> <span class="n">dropdown</span><span class="p">,</span> <span class="n">button</span><span class="p">])</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_toggle_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="n">hbox</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toggle</span><span class="p">,</span> <span class="n">dropdown</span><span class="p">,</span> <span class="n">button</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">hbox</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="p">[</span><span class="n">toggle</span><span class="p">]</span>
+
+    <span class="n">toggle</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_toggle_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_button_click</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
+        <span class="n">hbox</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">toggle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">dropdown</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">button</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">button</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_button_click</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_dropdown_change</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">layer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">layers</span><span class="p">[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_basemap</span><span class="p">(</span><span class="n">change</span><span class="p">[</span><span class="s2">&quot;new&quot;</span><span class="p">])</span>
+
+    <span class="n">dropdown</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">on_dropdown_change</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+
+    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">hbox</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
@@ -1262,7 +1583,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Add a GeoDataFrame to the map.</p>
+      <p>Adds a GeoDataFrame to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1292,8 +1613,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_gdf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a GeoDataFrame to the map.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a GeoDataFrame to the map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        gdf (geopandas.GeoDataFrame): The GeoDataFrame to add.</span>
@@ -1322,7 +1642,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Add a GeoJSON layer to the map.</p>
+      <p>Adds a GeoJSON layer to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1350,7 +1670,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
       <tr>
         <td><code>hover_style</code></td>
         <td><code>dict</code></td>
-        <td><p>Style applied when hovering over the layer. Defaults to {"color": "yellow", "fillOpacity": 0.2}.</p></td>
+        <td><p>Style to apply when hovering over features. Defaults to {"color": "yellow", "fillOpacity": 0.2}.</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
@@ -1378,14 +1698,19 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 </table>
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">hover_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a GeoJSON layer to the map.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_geojson</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">data</span><span class="p">,</span>
+    <span class="n">zoom_to_layer</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">hover_style</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a GeoJSON layer to the map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str or dict): The GeoJSON data. Can be a file path (str) or a dictionary.</span>
 <span class="sd">        zoom_to_layer (bool, optional): Whether to zoom to the layer&#39;s bounds. Defaults to True.</span>
-<span class="sd">        hover_style (dict, optional): Style applied when hovering over the layer. Defaults to {&quot;color&quot;: &quot;yellow&quot;, &quot;fillOpacity&quot;: 0.2}.</span>
+<span class="sd">        hover_style (dict, optional): Style to apply when hovering over features. Defaults to {&quot;color&quot;: &quot;yellow&quot;, &quot;fillOpacity&quot;: 0.2}.</span>
 <span class="sd">        **kwargs: Additional keyword arguments for the ipyleaflet.GeoJSON layer.</span>
 
 <span class="sd">    Raises:</span>
@@ -1395,6 +1720,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <span class="k">if</span> <span class="n">hover_style</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">hover_style</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;fillOpacity&quot;</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">}</span>
+
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="n">geojson</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">__geo_interface__</span>
@@ -1426,7 +1752,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Add a Google Map to the map.</p>
+      <p>Add Google Map to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1450,12 +1776,11 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_google_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">map_type</span><span class="o">=</span><span class="s2">&quot;ROADMAP&quot;</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a Google Map to the map.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add Google Map to the map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        map_type (str, optional): Map type. Defaults to &quot;ROADMAP&quot;.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="n">map_types</span> <span class="o">=</span> <span class="p">{</span>
         <span class="s2">&quot;ROADMAP&quot;</span><span class="p">:</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span>
         <span class="s2">&quot;SATELLITE&quot;</span><span class="p">:</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span>
@@ -1481,48 +1806,15 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
 
 
-<h3 id="geonexus.geonexus.Map.add_layer_control" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+<h3 id="geonexus.geonexus.Map.add_image" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
 
 
-<a href="#geonexus.geonexus.Map.add_layer_control" class="headerlink" title="Permanent link">&para;</a></h3>
-
-    <div class="doc doc-contents ">
-
-      <p>Add a layer control widget to the map.</p>
-<p>The layer control allows users to toggle the visibility of layers.</p>
-
-        <details class="quote">
-          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a layer control widget to the map.</span>
-
-<span class="sd">    The layer control allows users to toggle the visibility of layers.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">)</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
-</code></pre></div>
-        </details>
-    </div>
-
-  </div>
-
-
-
-  <div class="doc doc-object doc-method">
-
-
-
-<h3 id="geonexus.geonexus.Map.add_raster" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raster_source</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
-
-
-<a href="#geonexus.geonexus.Map.add_raster" class="headerlink" title="Permanent link">&para;</a></h3>
+<a href="#geonexus.geonexus.Map.add_image" class="headerlink" title="Permanent link">&para;</a></h3>
 
     <div class="doc doc-contents ">
 
-      <p>Adds a raster tile layer to the map from a file path or URL.</p>
+      <p>Adds an image to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1536,63 +1828,74 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
   </thead>
   <tbody>
       <tr>
-        <td><code>raster_source</code></td>
+        <td><code>image</code></td>
         <td><code>str</code></td>
-        <td><p>File path or URL to the raster.</p></td>
+        <td><p>The file path to the image.</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
-        <td><code>name</code></td>
-        <td><code>str</code></td>
-        <td><p>Optional name for the raster layer.</p></td>
+        <td><code>bounds</code></td>
+        <td><code>list</code></td>
+        <td><p>The bounds for the image. Defaults to None.</p></td>
         <td><code>None</code></td>
       </tr>
       <tr>
         <td><code>**kwargs</code></td>
         <td></td>
-        <td><p>Additional arguments passed to the tile layer.</p></td>
+        <td><p>Additional keyword arguments for the ipyleaflet.ImageOverlay layer.</p></td>
         <td><code>{}</code></td>
       </tr>
   </tbody>
 </table>
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_raster</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">raster_source</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Adds a raster tile layer to the map from a file path or URL.</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds an image to the map.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        raster_source (str): File path or URL to the raster.</span>
-<span class="sd">        name (str, optional): Optional name for the raster layer.</span>
-<span class="sd">        **kwargs: Additional arguments passed to the tile layer.</span>
+<span class="sd">        image (str): The file path to the image.</span>
+<span class="sd">        bounds (list, optional): The bounds for the image. Defaults to None.</span>
+<span class="sd">        **kwargs: Additional keyword arguments for the ipyleaflet.ImageOverlay layer.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">localtileserver</span><span class="w"> </span><span class="kn">import</span> <span class="n">TileClient</span><span class="p">,</span> <span class="n">get_leaflet_tile_layer</span>
-    <span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-    <span class="c1"># Check if it&#39;s a URL or a file path</span>
-    <span class="k">if</span> <span class="n">raster_source</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">raster_source</span><span class="p">):</span>
-        <span class="n">client</span> <span class="o">=</span> <span class="n">TileClient</span><span class="p">(</span><span class="n">raster_source</span><span class="p">)</span>
-        <span class="n">layer</span> <span class="o">=</span> <span class="n">get_leaflet_tile_layer</span><span class="p">(</span><span class="n">client</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid raster source. Provide a valid URL or file path.&quot;</span><span class="p">)</span>
-
-    <span class="c1"># Optionally name the layer</span>
-    <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
-        <span class="n">layer</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-
-    <span class="c1"># Add to map</span>
-    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
-
-    <span class="c1"># Center the map once on the first layer</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;_has_centered&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">center</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">zoom</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">default_zoom</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_has_centered</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span><span class="p">]]</span>
+    <span class="n">overlay</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">ImageOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
 
   </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geonexus.geonexus.Map.add_layer_control" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span></code>
+
+
+<a href="#geonexus.geonexus.Map.add_layer_control" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a layer control widget to the map.</p>
+
+        <details class="quote">
+          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_layer_control</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a layer control widget to the map.&quot;&quot;&quot;</span>
+    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">LayersControl</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add_control</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
 
 
 
@@ -1608,7 +1911,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Add a shapefile to the map.</p>
+      <p>Adds a shapefile to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1638,8 +1941,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_shp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add a shapefile to the map.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a shapefile to the map.</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): The file path to the shapefile.</span>
@@ -1671,7 +1973,7 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <div class="doc doc-contents ">
 
-      <p>Add vector data to the map.</p>
+      <p>Adds vector data to the map.</p>
 
 <p><strong>Parameters:</strong></p>
 <table>
@@ -1687,13 +1989,13 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
       <tr>
         <td><code>data</code></td>
         <td><code>str, geopandas.GeoDataFrame, or dict</code></td>
-        <td><p>The vector data. Can be a file path (str), a GeoDataFrame, or a GeoJSON dictionary.</p></td>
+        <td><p>The vector data. Can be a file path, GeoDataFrame, or GeoJSON dictionary.</p></td>
         <td><em>required</em></td>
       </tr>
       <tr>
         <td><code>**kwargs</code></td>
         <td></td>
-        <td><p>Additional keyword arguments for the layer.</p></td>
+        <td><p>Additional keyword arguments for the GeoJSON layer.</p></td>
         <td><code>{}</code></td>
       </tr>
   </tbody>
@@ -1716,12 +2018,11 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
         <details class="quote">
           <summary>Source code in <code>geonexus/geonexus.py</code></summary>
           <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_vector</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Add vector data to the map.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds vector data to the map.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        data (str, geopandas.GeoDataFrame, or dict): The vector data. Can be a file path (str), a GeoDataFrame, or a GeoJSON dictionary.</span>
-<span class="sd">        **kwargs: Additional keyword arguments for the layer.</span>
+<span class="sd">        data (str, geopandas.GeoDataFrame, or dict): The vector data. Can be a file path, GeoDataFrame, or GeoJSON dictionary.</span>
+<span class="sd">        **kwargs: Additional keyword arguments for the GeoJSON layer.</span>
 
 <span class="sd">    Raises:</span>
 <span class="sd">        ValueError: If the data type is invalid.</span>
@@ -1730,13 +2031,215 @@ Map            (<span title="ipyleaflet.leaflet.Map">Map</span>)
 
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
         <span class="n">gdf</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">add_shp</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_gdf</span><span class="p">(</span><span class="n">gdf</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_gdf</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_geojson</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid data type&quot;</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geonexus.geonexus.Map.add_video" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geonexus.geonexus.Map.add_video" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a video to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>video</code></td>
+        <td><code>str</code></td>
+        <td><p>The file path to the video.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>bounds</code></td>
+        <td><code>list</code></td>
+        <td><p>The bounds for the video. Defaults to None.</p></td>
+        <td><code>None</code></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td></td>
+        <td><p>Additional keyword arguments for the ipyleaflet.VideoOverlay layer.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_video</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">video</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a video to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        video (str): The file path to the video.</span>
+<span class="sd">        bounds (list, optional): The bounds for the video. Defaults to None.</span>
+<span class="sd">        **kwargs: Additional keyword arguments for the ipyleaflet.VideoOverlay layer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">bounds</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">bounds</span> <span class="o">=</span> <span class="p">[[</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="o">-</span><span class="mi">180</span><span class="p">],</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">180</span><span class="p">]]</span>
+    <span class="n">overlay</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">VideoOverlay</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">video</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="n">bounds</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">overlay</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geonexus.geonexus.Map.add_widget" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s1">&#39;topright&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geonexus.geonexus.Map.add_widget" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Add a widget to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>widget</code></td>
+        <td><code>ipywidgets.Widget</code></td>
+        <td><p>The widget to add.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>position</code></td>
+        <td><code>str</code></td>
+        <td><p>The position of the widget. Defaults to "topright".</p></td>
+        <td><code>&#39;topright&#39;</code></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td></td>
+        <td><p>Additional keyword arguments for the ipyleaflet.WidgetControl layer.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_widget</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="s2">&quot;topright&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Add a widget to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        widget (ipywidgets.Widget): The widget to add.</span>
+<span class="sd">        position (str, optional): The position of the widget. Defaults to &quot;topright&quot;.</span>
+<span class="sd">        **kwargs: Additional keyword arguments for the ipyleaflet.WidgetControl layer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">control</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WidgetControl</span><span class="p">(</span><span class="n">widget</span><span class="o">=</span><span class="n">widget</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="n">position</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">control</span><span class="p">)</span>
+</code></pre></div>
+        </details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-method">
+
+
+
+<h3 id="geonexus.geonexus.Map.add_wms_layer" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">add_wms_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;image/png&#39;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+
+<a href="#geonexus.geonexus.Map.add_wms_layer" class="headerlink" title="Permanent link">&para;</a></h3>
+
+    <div class="doc doc-contents ">
+
+      <p>Adds a WMS layer to the map.</p>
+
+<p><strong>Parameters:</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><code>url</code></td>
+        <td><code>str</code></td>
+        <td><p>The WMS service URL.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>layers</code></td>
+        <td><code>str</code></td>
+        <td><p>The layers to display.</p></td>
+        <td><em>required</em></td>
+      </tr>
+      <tr>
+        <td><code>**kwargs</code></td>
+        <td></td>
+        <td><p>Additional keyword arguments for the ipyleaflet.WMSLayer layer.</p></td>
+        <td><code>{}</code></td>
+      </tr>
+  </tbody>
+</table>
+        <details class="quote">
+          <summary>Source code in <code>geonexus/geonexus.py</code></summary>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">add_wms_layer</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;image/png&quot;</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Adds a WMS layer to the map.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        url (str): The WMS service URL.</span>
+<span class="sd">        layers (str): The layers to display.</span>
+<span class="sd">        **kwargs: Additional keyword arguments for the ipyleaflet.WMSLayer layer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">ipyleaflet</span><span class="o">.</span><span class="n">WMSLayer</span><span class="p">(</span>
+        <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">layers</span><span class="o">=</span><span class="n">layers</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="nb">format</span><span class="p">,</span> <span class="n">transparent</span><span class="o">=</span><span class="n">transparent</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
+    <span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 </code></pre></div>
         </details>
     </div>
