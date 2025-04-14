@@ -24,30 +24,31 @@ class Map(ipyleaflet.Map):
         self.add(layer)
 
     def add_basemap_gui(self, options=None, position="topright"):
-        """ Add a graphical user interface (GUI) for selecting basemaps.
-        
-        Args: 
+        """Add a graphical user interface (GUI) for selecting basemaps.
+
+        Args:
             options (list, optional): A list of basemap options to display in the dropdown.
                 Defaults to ["OpenStreetMap.Mapnik", "OpenTopoMap", "Esri.WorldImagery", "CartoDB.Positron"].
             position (str, optional): The position of the GUI on the map. Defaults to the topright.
-            
+
             Behavior:
             - A toggle botton is used to show or hide the drop and close menu.
             - The dropdown allows users to select the basemap from the provided options.
             - The close button removes the widget from the map
-            
-            Event handlers: 
+
+            Event handlers:
             - `on_toggle_change`: Toggles the visibility of the dropdown and close button.
             - `on_button_click`: Closes and removes the widget when the close button is clicked.
             - `on_dropdown_change`: Updates the map's basemap when a new option is selected.
-            """
+        """
 
         if options is None:
             options = [
                 "OpenStreetMap",
                 "OpenTopoMap",
-                "Stamen Terrain",]
-                        
+                "Stamen Terrain",
+            ]
+
         toggle = widgets.ToggleButton(
             value=True,
             button_style="",  # 'success', 'info', 'warning', 'danger' or ''
@@ -56,7 +57,6 @@ class Map(ipyleaflet.Map):
         )
         toggle.layout = widgets.Layout(width="38px", height="38px")
 
-
         dropdown = widgets.Dropdown(
             options=options,
             value=options[0],
@@ -64,7 +64,6 @@ class Map(ipyleaflet.Map):
             style={"description_width": "initial"},
         )
         dropdown.layout = widgets.Layout(width="250px", height="38px")
-
 
         button = widgets.Button(
             icon="times",
@@ -87,14 +86,12 @@ class Map(ipyleaflet.Map):
             dropdown.close()
             button.close()
 
-
         button.on_click(on_button_click)
 
         def on_dropdown_change(change):
             if change["new"]:
                 self.layer = self.layers[:-2]
                 self.add_basemap(change["new"])
-
 
         dropdown.observe(on_dropdown_change, names="value")
 
