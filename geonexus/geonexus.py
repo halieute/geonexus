@@ -32,7 +32,7 @@ class Map(ipyleaflet.Map):
             position (str, optional): The position of the GUI on the map. Defaults to the topright.
 
             Behavior:
-            - A toggle botton is used to show or hide the drop and close menu.
+            - A toggle button is used to show or hide the dropdown and close menu.
             - The dropdown allows users to select the basemap from the provided options.
             - The close button removes the widget from the map
 
