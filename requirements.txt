@@ -4,4 +4,3 @@ ipyleaflet
 localtileserver
 matplotlib
 numpy
-localtileserver
