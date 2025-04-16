@@ -77,3 +77,7 @@ Geonexus offers a wide range of features and capabilities that empower geospatia
 -   **Building interactive web apps:** Geonexus supports the development of interactive web applications using frameworks like Voila, Streamlit, and Solara. This allows you to share your geospatial analyses and visualizations with others in a user-friendly web interface.
 
 These features and capabilities make geonexus a powerful tool for geospatial data exploration, analysis, and visualization. Whether you are a beginner or an experienced geospatial data scientist, geonexus provides an accessible and efficient way to work with geospatial data in Python.
+
+## Demo
+
+![16 04 2025_13 07 53_REC-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/1c96f10a-f5b4-46f3-b22a-325fc9b0169b)
