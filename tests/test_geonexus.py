@@ -2,7 +2,6 @@
 
 """Tests for `geonexus` package."""
 
-
 import unittest
 
 from geonexus import geonexus
